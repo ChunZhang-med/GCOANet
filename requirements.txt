@@ -1,0 +1,4 @@
+﻿numpy>=2.1
+pandas>=2.2
+scikit-learn>=1.6
+torch>=2.6

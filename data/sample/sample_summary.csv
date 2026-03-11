@@ -1,0 +1,7 @@
+artifact,shape_or_count
+labels,"(50, 2)"
+mrna,"(50, 220)"
+methylation,"(50, 300)"
+mirna,"(50, 90)"
+edges_cpg_gene,304
+edges_mirna_gene,1774
