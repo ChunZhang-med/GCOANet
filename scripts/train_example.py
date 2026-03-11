@@ -56,12 +56,12 @@ def train_one_fold(
     n_classes: int,
     A_gc: torch.Tensor,
     A_gm: torch.Tensor,
-    epochs: int = 200,
+    epochs: int = 100,
     lr: float = 1e-3,
     wd: float = 1e-4,
-    lambda_gr: float = 0.02,
+    lambda_gr: float = 0.001,
     hidden_dim: int = 64,
-    num_layers: int = 2,
+    num_layers: int = 3,
 ) -> tuple[np.ndarray, np.ndarray]:
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = GCOANet(
@@ -115,11 +115,11 @@ def main() -> None:
     parser.add_argument("--data-dir", default="data/sample")
     parser.add_argument("--output-dir", default="outputs")
     parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--epochs", type=int, default=80)
+    parser.add_argument("--epochs", type=int, default=100)
     parser.add_argument("--n-splits", type=int, default=5)
     parser.add_argument("--hidden-dim", type=int, default=64)
-    parser.add_argument("--num-layers", type=int, default=2)
-    parser.add_argument("--lambda-gr", type=float, default=0.02)
+    parser.add_argument("--num-layers", type=int, default=3)
+    parser.add_argument("--lambda-gr", type=float, default=0.001)
     args = parser.parse_args()
 
     set_seed(args.seed)
