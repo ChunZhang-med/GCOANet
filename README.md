@@ -1,15 +1,10 @@
-﻿# GCOA-Net (Open-Source Release)
+﻿# GCOA-Net
 
 This repository provides the **core model implementation** from our paper:
 - Graph-regularized cross-omics attention network
 - Relation-aware heterogeneous message passing (gene/CpG/miRNA)
 - Two-level attention readout (node-level + modality-level)
 - Joint objective with graph regularization
-
-This release intentionally does **not** include:
-- Raw-data downloading/cleaning pipeline
-- Baseline model comparisons
-- Ablation/deployment analysis workflows
 
 ## Structure
 - `data/sample/`
@@ -34,4 +29,3 @@ python scripts/train_example.py --data-dir data/sample --output-dir outputs
 
 ## Note
 The bundled sample dataset is for code validation and method demonstration.
-It is not intended to reproduce exact manuscript numbers.
